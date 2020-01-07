@@ -34,7 +34,7 @@
         tools:layout="@layout/fragment_practical">
         <action
             android:id="@+id/action_practical_to_completePractical"
-            app:destination="@id/action_complete_practical_to_practical"
+            app:destination="@id/completePractical"
             app:popUpTo="@+id/practical"
             app:popUpToInclusive="true" />
         <action
@@ -52,11 +52,11 @@
         android:label="About Us"
         tools:layout="@layout/fragment_about_us" />
     <fragment
-        android:id="@+id/action_complete_practical_to_practical"
+        android:id="@+id/completePractical"
         android:name="com.example.menu.CompletePractical"
         android:label="You Win">
         <action
-            android:id="@+id/action_complete_practical_to_practical"
+            android:id="@+id/action_completePractical_to_practical"
             app:destination="@id/practical" />
     </fragment>
     <fragment

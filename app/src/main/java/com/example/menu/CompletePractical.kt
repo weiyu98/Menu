@@ -23,7 +23,7 @@ class CompletePractical : Fragment() {
             R.layout.fragment_complete_practical,container,false)
 
         binding.button.setOnClickListener{
-            view?.findNavController()?.navigate(R.id.action_complete_practical_to_practical)}
+            view?.findNavController()?.navigate(R.id.action_completePractical_to_practical)}
 
         return binding.root
 
