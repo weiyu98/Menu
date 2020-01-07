@@ -41,13 +41,7 @@ class Login : Fragment() {
             if (login_username.text.toString().isNotEmpty() && login_pass.text.toString().isNotEmpty()) {
                 if (handler.userLogin(login_username.text.toString(), login_pass.text.toString())) {
                     Toast.makeText(activity, "Login Successful", Toast.LENGTH_SHORT).show()
-                    view?.findNavController()?.navigate(R.id.action_login_to_menu)
-                    //var data = handler.retrieveData(login_username.text.toString())
-
-                    //afterUsername.text = ""
-                    //for (i in 0..(data.size - 1)) {
-                    //afterUsername.append(data.get(i).username)
-                    //}
+                    view?.findNavController()?.navigate(R.id.menu)
                 } else {
                     Toast.makeText(activity, "Username Or Password Incorrect, Please enter again~", Toast.LENGTH_SHORT).show()
                 }

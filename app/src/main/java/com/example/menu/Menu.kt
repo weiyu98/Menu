@@ -16,20 +16,23 @@ import com.example.menu.databinding.FragmentMenuBinding
  */
 class Menu : Fragment() {
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentMenuBinding>(inflater,
             R.layout.fragment_menu,container,false)
-        val action = MenuDirections.actionMenuToLogin()
-        NavHostFragment.findNavController(this).navigate(action)
+
 
         binding.btnTutorial.setOnClickListener{
             view?.findNavController()?.navigate(R.id.action_menu_to_tutorial)}
 
         binding.btnPractical.setOnClickListener{
             view?.findNavController()?.navigate(R.id.action_menu_to_practical)}
+
+        binding.imageView3.setOnClickListener(){
+            view?.findNavController()?.navigate(R.id.login)}
 
 
 

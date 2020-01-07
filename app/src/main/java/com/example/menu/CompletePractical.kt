@@ -22,8 +22,8 @@ class CompletePractical : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentCompletePracticalBinding>(inflater,
             R.layout.fragment_complete_practical,container,false)
 
-        binding.button.setOnClickListener(){
-            view?.findNavController()?.navigate(R.id.action_completePractical_to_practical)}
+        binding.button.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.action_complete_practical_to_practical)}
 
         return binding.root
 
