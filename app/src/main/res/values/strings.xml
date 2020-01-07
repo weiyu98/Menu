@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Menu</string>
+    <string name="trash_it_right">Trash it Right!</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="practical">Practical</string>
+    <string name="About_Us">About Us</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">About Us</string>
+    <string name="About_Details">Info about our app....</string>
+    <string name="timeLeft">Time left: %1$d</string>
+    <string name="welcome">Welcome</string>
+    <string name="log_in">Login</string>
+    <string name="not_registered">Not Registered? Register Now!</string>
+    <string name="todo">todo</string>
+    <string name="password">Enter Password</string>
+    <string name="username">Enter Username</string>
+    <string name="cancel">Cancel</string>
+    <string name="register">Register</string>
+    <string name="address">Enter Address</string>
+    <string name="confirm_password">Enter Confirm Password</string>
+    <string name="email">Enter Email</string>
+    <string name="registration_form">Registration</string>
+    <string name="congratulation">Congratulation!</string>
+    <string name="button_win">Next Match</string>
+    <string name="try_again">Try again</string>
+    <string name="btn_lose">Play again</string>
+    <string name="phone_no">Phone No :</string>
+    <string name="name">Name :</string>
+    <string name="garbage_collection_request">Garbage Collection Request</string>
+    <string name="click_to_select_service_date_time">Click to Select Service Date Time</string>
+</resources>
