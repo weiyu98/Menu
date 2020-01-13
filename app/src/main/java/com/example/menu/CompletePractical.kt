@@ -1,6 +1,7 @@
 package com.example.menu
 
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,6 +22,9 @@ class CompletePractical : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentCompletePracticalBinding>(inflater,
             R.layout.fragment_complete_practical,container,false)
+
+        val win = MediaPlayer.create(activity, R.raw.youwin)
+        win.start()
 
         binding.button.setOnClickListener{
             view?.findNavController()?.navigate(R.id.action_completePractical_to_practical)}

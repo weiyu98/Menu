@@ -57,15 +57,15 @@ class Practical : Fragment() {
 
         var count  = 0
 
-        val image : List<Int> = listOf(R.drawable.bandaid, R.drawable.chemical, R.drawable.cigarette,R.drawable.hairgel,
-            R.drawable.injection,R.drawable.lightbulb, R.drawable.medicalglove,R.drawable.nailpolish,
-            R.drawable.paint,R.drawable.battery,R.drawable.insecticide,R.drawable.makeup,R.drawable.thermometer,R.drawable.apple,R.drawable.bread,R.drawable.cake,R.drawable.chilli,R.drawable.chocolate,
-            R.drawable.corn,R.drawable.crab,R.drawable.dryleaf,R.drawable.eggshell,R.drawable.fishbone,R.drawable.shrimp,
-            R.drawable.strawberry,R.drawable.tomatosauce,R.drawable.vegetable,R.drawable.watermelon,R.drawable.basketball,R.drawable.bathtub,R.drawable.broom,R.drawable.chopstick,R.drawable.flowerpot,
-            R.drawable.peanut,R.drawable.rooftiles,R.drawable.toiletbowl,R.drawable.toiletpaper,R.drawable.seashell,R.drawable.sponge,
-            R.drawable.woodencomb,R.drawable.cap,R.drawable.cloths,R.drawable.lockpad,R.drawable.cup,R.drawable.glassbottle,R.drawable.handbag,
-            R.drawable.milkbox,R.drawable.mirror,R.drawable.plasticbottle,R.drawable.plasticcomb,R.drawable.shoe,R.drawable.tin,
-            R.drawable.toys,R.drawable.toothpaste,R.drawable.safetypin)
+        val image : List<Int> = listOf( R.drawable.chemical, R.drawable.cake,R.drawable.cigarette,R.drawable.hairgel,R.drawable.bathtub,
+            R.drawable.injection, R.drawable.medicalglove,R.drawable.broom,R.drawable.nailpolish,R.drawable.thermometer,R.drawable.chopstick,
+            R.drawable.battery,R.drawable.insecticide,R.drawable.makeup,R.drawable.apple,R.drawable.bread,R.drawable.chilli,R.drawable.chocolate,
+            R.drawable.corn,R.drawable.crab,R.drawable.paint,R.drawable.dryleaf,R.drawable.eggshell,R.drawable.fishbone,R.drawable.shrimp,
+            R.drawable.strawberry,R.drawable.tomatosauce,R.drawable.flowerpot, R.drawable.vegetable,R.drawable.watermelon,R.drawable.basketball,
+            R.drawable.peanut,R.drawable.rooftiles,R.drawable.toiletbowl,R.drawable.handbag,R.drawable.toiletpaper,R.drawable.seashell,
+            R.drawable.woodencomb,R.drawable.cap,R.drawable.bandaid,R.drawable.cloths,R.drawable.lockpad,R.drawable.cup,R.drawable.glassbottle,
+            R.drawable.lightbulb,R.drawable.milkbox,R.drawable.mirror,R.drawable.plasticbottle,R.drawable.plasticcomb,R.drawable.shoe,R.drawable.tin,
+            R.drawable.toys,R.drawable.toothpaste,R.drawable.safetypin,R.drawable.sponge)
 
         val dragableImage : List<ImageView> = listOf(binding.garbage1, binding.garbage2,
             binding.garbage3, binding.garbage4, binding.garbage5, binding.garbage6, binding.garbage7, binding.garbage8)
@@ -184,7 +184,6 @@ class Practical : Fragment() {
 
         if(count == 8) {
             val action = PracticalDirections.actionPracticalToCompletePractical()
-            //record.text = timer_text.text
             NavHostFragment.findNavController(this).navigate(action)
         }
         else if(count == 0 || count < 8){
