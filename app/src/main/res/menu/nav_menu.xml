@@ -6,5 +6,8 @@
     <item
         android:id="@+id/garbageCollectionService"
         android:title="Garbage Collection Service"/>
+    <item
+        android:id="@+id/editProfile"
+        android:title="Edit Profile"/>
 
 </menu>

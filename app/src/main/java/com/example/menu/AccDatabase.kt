@@ -6,6 +6,11 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+
+object GlobalVariable {
+    lateinit var userID:String
+}
+
 class AccDatabase (context: Context): SQLiteOpenHelper(context, dbname, factory, version) {
 
     override fun onCreate(p0: SQLiteDatabase?) {

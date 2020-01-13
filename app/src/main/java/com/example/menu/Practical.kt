@@ -4,6 +4,7 @@ package com.example.menu
 import android.app.AlertDialog
 import android.content.ClipData
 import android.graphics.Color
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -54,11 +55,7 @@ class Practical : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentPracticalBinding>(inflater,
             R.layout.fragment_practical,container,false)
 
-
-
-
-
-        var count : Int = 0
+        var count  = 0
 
         val image : List<Int> = listOf(R.drawable.bandaid, R.drawable.chemical, R.drawable.cigarette,R.drawable.hairgel,
             R.drawable.injection,R.drawable.lightbulb, R.drawable.medicalglove,R.drawable.nailpolish,
@@ -118,39 +115,39 @@ class Practical : Fragment() {
                 true
             })
 
-
             for(dropItem in dropTarget) {
                 dropItem.setOnDragListener{ v, event ->
-                    // TODO Auto-generated method stub
                     for(garbage in game) {
+                        var wrongBin = 0
+                        var correctWrongBin = 0
                         for(item in garbage.garbage) {
                             when (event.action) {
-                                DragEvent.ACTION_DRAG_STARTED -> {
-                                }
-
-                                DragEvent.ACTION_DRAG_EXITED -> {
-                                }
-
-                                DragEvent.ACTION_DRAG_ENTERED -> {
-                                }
-
                                 DragEvent.ACTION_DROP -> {
-
-                                    if (v.id == garbage.bin && thisView.drawable.constantState == resources.getDrawable(item,null).constantState){
-                                        thisView.visibility = View.INVISIBLE
-                                        count++
+                                    if (v.id == garbage.bin){
+                                        if(thisView.drawable.constantState == resources.getDrawable(item,null).constantState) {
+                                            val correct = MediaPlayer.create(activity, R.raw.correctsoundeffect)
+                                            thisView.visibility = View.INVISIBLE
+                                            correct.start()
+                                            correctWrongBin += 1
+                                            count++
+                                        }
+                                        else if (thisView.drawable.constantState != resources.getDrawable(item,null).constantState) {
+                                           wrongBin++
+                                        }
                                     }
-                                }
-                                DragEvent.ACTION_DRAG_ENDED -> {
-
                                 }
                             }
                         }
-                    }
+                        if (wrongBin > 0 && correctWrongBin == 0){
+                            val wrong = MediaPlayer.create(activity, R.raw.wrongsoundeffect)
+                            wrong.start()
+                        }
 
+                    }
                     true
                 }
             }
+
 
             for(item in dragableImage) {
                 item.setOnTouchListener(listener)
@@ -179,7 +176,6 @@ class Practical : Fragment() {
         // Display the alert dialog on app interface
         dialog.show()
 
-
         return binding.root
     }
 
@@ -192,7 +188,7 @@ class Practical : Fragment() {
             NavHostFragment.findNavController(this).navigate(action)
         }
         else if(count == 0 || count < 8){
-            val action = FailPracticalDirections.actionFailPracticalToPractical()
+            val action = PracticalDirections.actionPracticalToFailPractical()
             NavHostFragment.findNavController(this).navigate(action)
         }
 

@@ -1,6 +1,8 @@
 package com.example.menu
 
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -31,10 +33,9 @@ class Menu : Fragment() {
         binding.btnPractical.setOnClickListener{
             view?.findNavController()?.navigate(R.id.action_menu_to_practical)}
 
-        binding.imageView3.setOnClickListener(){
-            view?.findNavController()?.navigate(R.id.login)}
-
-
+        binding.imageView3.setOnClickListener{
+            startActivity(Intent(activity,Main2Activity::class.java))
+        }
 
         return binding.root
         }

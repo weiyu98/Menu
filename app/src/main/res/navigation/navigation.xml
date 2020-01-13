@@ -30,7 +30,7 @@
     <fragment
         android:id="@+id/practical"
         android:name="com.example.menu.Practical"
-        android:label="Ptactical"
+        android:label="Practical"
         tools:layout="@layout/fragment_practical">
         <action
             android:id="@+id/action_practical_to_completePractical"
@@ -60,24 +60,6 @@
             app:destination="@id/practical" />
     </fragment>
     <fragment
-        android:id="@+id/login"
-        android:name="com.example.menu.Login"
-        android:label="Login"
-        tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_login_to_register"
-            app:destination="@id/register" />
-    </fragment>
-    <fragment
-        android:id="@+id/register"
-        android:name="com.example.menu.Register"
-        android:label="Registration"
-        tools:layout="@layout/fragment_register">
-        <action
-            android:id="@+id/action_register_to_login"
-            app:destination="@id/login" />
-    </fragment>
-    <fragment
         android:id="@+id/failPractical"
         android:name="com.example.menu.FailPractical"
         android:label="You lose"
@@ -91,4 +73,9 @@
         android:name="com.example.menu.GarbageCollectionService"
         android:label="Garbage Collection Service"
         tools:layout="@layout/fragment_garbage_collection" />
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.example.menu.EditProfile"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile" />
 </navigation>
