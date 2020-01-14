@@ -60,6 +60,7 @@ class Main2Activity : AppCompatActivity() {
             if (login_username.text.toString().isNotEmpty() && login_pass.text.toString().isNotEmpty()) {
                 if (handler.userLogin(login_username.text.toString(), login_pass.text.toString())) {
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                    GlobalVariable.userID = login_username.text.toString()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 } else {

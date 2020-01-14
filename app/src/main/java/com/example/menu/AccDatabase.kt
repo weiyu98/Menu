@@ -97,6 +97,20 @@ class AccDatabase (context: Context): SQLiteOpenHelper(context, dbname, factory,
         return list
     }
 
+    fun editProfile(username: String, pass: String, email: String, address: String){
+        val db = this.writableDatabase
+        val cv = ContentValues()
+        var data = retrieveData(username)
+
+        for(i in 0..(data.size-1)){
+            cv.put("pass", pass)
+            cv.put("email", email)
+            cv.put("address", address)
+            db.update("info",cv,"username = '$username' ",null)
+        }
+        db.close()
+    }
+
     companion object {
         internal val dbname = "userDB"
         internal val factory = null

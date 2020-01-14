@@ -40,4 +40,5 @@
     <string name="todo">todo</string>
     <string name="garbage_collection">Garbage Collection</string>
     <string name="collection_service">Collection Service</string>
+    <string name="editconfirm_password">Confirm Password</string>
 </resources>

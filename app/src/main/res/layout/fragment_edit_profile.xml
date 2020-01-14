@@ -14,7 +14,7 @@
             android:id="@+id/Profile"
             android:layout_width="401dp"
             android:layout_height="55dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="36dp"
             android:background="#00FEFFFF"
             android:gravity="left"
             android:padding="10dp"
@@ -24,6 +24,7 @@
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,11 +64,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editusername" />
 
-        <EditText
+
+
+        <TextView
             android:id="@+id/editusername"
-            android:layout_width="280dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="278dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="52dp"
             android:layout_marginEnd="8dp"
             android:background="#30FFFFFF"
             android:clickable="false"
@@ -75,11 +78,11 @@
             android:ems="10"
             android:hint="@string/editusername"
             android:importantForAutofill="no"
-            android:inputType="text"
             android:maxLines="1"
             android:shadowColor="#00FFFFFF"
             android:singleLine="false"
             android:textAlignment="center"
+            android:textSize="20sp"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.577"
