@@ -1,6 +1,5 @@
 package com.example.menu
 
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -37,21 +36,20 @@ class EditProfile : Fragment() {
         var data = handler.retrieveData(userID)
         for(i in 0..(data.size-1)){
             editusername.append(data.get(i).username)
-            editpass.append(data.get(i).password)
             editemail.append(data.get(i).email)
             editaddress.append(data.get(i).address)
         }
 
         edit_button.setOnClickListener {
-            if (editpass.text.toString().isNotEmpty()) {
-                    if (editemail.text.toString().isNotEmpty() && editaddress.text.toString().isNotEmpty()) {
-                        handler.editProfile(editusername.text.toString(), editpass.text.toString(), editemail.text.toString(), editaddress.text.toString())
-                        Toast.makeText(activity, "Edit Profile Successful", Toast.LENGTH_SHORT).show()
-                    }else {
-                        Toast.makeText(activity, "Email & Address cannot be empty", Toast.LENGTH_SHORT).show()
-                    }
+            if (editemail.text.toString().isNotEmpty()) {
+                if (editaddress.text.toString().isNotEmpty()) {
+                    handler.editProfile(editusername.text.toString(), editemail.text.toString(), editaddress.text.toString())
+                    Toast.makeText(activity, "Edit Profile Successful", Toast.LENGTH_SHORT).show()
+                }else {
+                    Toast.makeText(activity, "Address cannot be empty", Toast.LENGTH_SHORT).show()
+                }
             } else
-                Toast.makeText(activity, "Password cannot be empty", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "Email cannot be empty", Toast.LENGTH_SHORT).show()
         }
     }
 

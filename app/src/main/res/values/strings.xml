@@ -23,7 +23,6 @@
     <string name="phone">Enter Phone No</string>
     <string name="Profile">Profile</string>
     <string name="editemail">Email</string>
-    <string name="editpassword">Password</string>
     <string name="editusername">User Name</string>
     <string name="editaddress">Address</string>
     <string name="edit">Edit</string>
@@ -32,7 +31,6 @@
     <string name="cancel">Cancel</string>
     <string name="register">Register</string>
     <string name="address">Enter Address</string>
-    <string name="confirm_password">Enter Confirm Password</string>
     <string name="email">Enter Email</string>
     <string name="welcome">Welcome</string>
     <string name="log_in">Login</string>
@@ -40,5 +38,12 @@
     <string name="todo">todo</string>
     <string name="garbage_collection">Garbage Collection</string>
     <string name="collection_service">Collection Service</string>
-    <string name="editconfirm_password">Confirm Password</string>
+    <string name="Change_Password">Change Password</string>
+    <string name="editpass">New Password</string>
+    <string name="editpass_button">Change Password</string>
+    <string name="editpassword">Retype Password</string>
+    <string name="confirm_password">Enter Retype Password</string>
+    <string name="editcurrentpass">Current Password</string>
+    <string name="garbage_collection_service">Garbage Collection Service</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>

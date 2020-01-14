@@ -143,7 +143,7 @@
             android:background="#C3FF9800"
             android:text="@string/register"
             android:textColor="#E8FFFFFF"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

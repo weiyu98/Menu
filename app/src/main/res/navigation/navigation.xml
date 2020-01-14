@@ -78,4 +78,9 @@
         android:name="com.example.menu.EditProfile"
         android:label="Edit Profile"
         tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/changePassword"
+        android:name="com.example.menu.ChangePassword"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
 </navigation>

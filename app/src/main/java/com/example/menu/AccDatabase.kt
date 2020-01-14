@@ -1,11 +1,9 @@
 package com.example.menu
 
-
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-
 
 object GlobalVariable {
     lateinit var userID:String
@@ -97,16 +95,26 @@ class AccDatabase (context: Context): SQLiteOpenHelper(context, dbname, factory,
         return list
     }
 
-    fun editProfile(username: String, pass: String, email: String, address: String){
+    fun editProfile(username: String, email: String, address: String){
         val db = this.writableDatabase
-        val cv = ContentValues()
+        val ep = ContentValues()
         var data = retrieveData(username)
 
         for(i in 0..(data.size-1)){
-            cv.put("pass", pass)
-            cv.put("email", email)
-            cv.put("address", address)
-            db.update("info",cv,"username = '$username' ",null)
+            ep.put("email", email)
+            ep.put("address", address)
+            db.update("info",ep,"username = '$username' ",null)
+        }
+        db.close()
+    }
+
+    fun changePass(username: String, pass: String){
+        val db = this.writableDatabase
+        val cp = ContentValues()
+        var data = retrieveData(username)
+        for(i in 0..(data.size-1)){
+            cp.put("pass", pass)
+            db.update("info",cp,"username = '$username' ",null)
         }
         db.close()
     }

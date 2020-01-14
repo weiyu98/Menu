@@ -14,7 +14,7 @@
             android:id="@+id/Profile"
             android:layout_width="401dp"
             android:layout_height="55dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="68dp"
             android:background="#00FEFFFF"
             android:gravity="left"
             android:padding="10dp"
@@ -28,11 +28,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <EditText
             android:id="@+id/editemail"
             android:layout_width="280dp"
             android:layout_height="55dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:background="#30FFFFFF"
             android:drawableStart="@drawable/email"
             android:ems="10"
@@ -44,33 +45,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.541"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editpass" />
-
-        <EditText
-            android:id="@+id/editpass"
-            android:layout_width="280dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="20dp"
-            android:background="#30FFFFFF"
-            android:drawableStart="@drawable/pass"
-            android:ems="10"
-            android:hint="@string/editpassword"
-            android:importantForAutofill="no"
-            android:inputType="textVisiblePassword"
-            android:maxLines="1"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.541"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editusername" />
-
-
 
         <TextView
             android:id="@+id/editusername"
-            android:layout_width="278dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="52dp"
+            android:layout_width="280dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="38dp"
             android:layout_marginEnd="8dp"
             android:background="#30FFFFFF"
             android:clickable="false"
@@ -94,7 +75,7 @@
             android:id="@+id/editaddress"
             android:layout_width="280dp"
             android:layout_height="55dp"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="28dp"
             android:background="#30FFFFFF"
             android:drawableStart="@drawable/home"
             android:ems="10"
@@ -120,7 +101,7 @@
             android:background="#C3FF9800"
             android:text="@string/edit"
             android:textColor="#E8FFFFFF"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
