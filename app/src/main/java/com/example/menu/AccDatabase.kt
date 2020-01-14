@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 object GlobalVariable {
     lateinit var userID:String
+    lateinit var LoginPassword:String
 }
 
 class AccDatabase (context: Context): SQLiteOpenHelper(context, dbname, factory, version) {
@@ -98,24 +99,32 @@ class AccDatabase (context: Context): SQLiteOpenHelper(context, dbname, factory,
     fun editProfile(username: String, email: String, address: String){
         val db = this.writableDatabase
         val ep = ContentValues()
-        var data = retrieveData(username)
-
-        for(i in 0..(data.size-1)){
-            ep.put("email", email)
-            ep.put("address", address)
-            db.update("info",ep,"username = '$username' ",null)
+        val query = "Select * from info where username = '$username' "
+        val result = db.rawQuery(query,null)
+        if(result.moveToFirst()){
+            do{
+                ep.put("email",email)
+                ep.put("address", address)
+                db.update("info",ep,"username = '$username' ",null)
+            }while (result.moveToNext())
         }
+        result.close()
         db.close()
+
     }
 
     fun changePass(username: String, pass: String){
         val db = this.writableDatabase
         val cp = ContentValues()
-        var data = retrieveData(username)
-        for(i in 0..(data.size-1)){
-            cp.put("pass", pass)
-            db.update("info",cp,"username = '$username' ",null)
+        val query = "Select * from info where username = '$username' "
+        val result = db.rawQuery(query,null)
+        if(result.moveToFirst()){
+            do{
+                cp.put("pass", pass)
+                db.update("nUser",cp,"username = '$username' ",null)
+            }while (result.moveToNext())
         }
+        result.close()
         db.close()
     }
 

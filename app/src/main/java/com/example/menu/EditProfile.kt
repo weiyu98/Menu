@@ -43,7 +43,7 @@ class EditProfile : Fragment() {
         edit_button.setOnClickListener {
             if (editemail.text.toString().isNotEmpty()) {
                 if (editaddress.text.toString().isNotEmpty()) {
-                    handler.editProfile(editusername.text.toString(), editemail.text.toString(), editaddress.text.toString())
+                    handler.editProfile(userID, editemail.text.toString(), editaddress.text.toString())
                     Toast.makeText(activity, "Edit Profile Successful", Toast.LENGTH_SHORT).show()
                 }else {
                     Toast.makeText(activity, "Address cannot be empty", Toast.LENGTH_SHORT).show()

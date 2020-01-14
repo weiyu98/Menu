@@ -8,9 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.example.menu.GlobalVariable.LoginPassword
+import com.example.menu.GlobalVariable.userID
 import com.example.menu.databinding.FragmentChangePasswordBinding
 import kotlinx.android.synthetic.main.fragment_change_password.*
-import kotlinx.android.synthetic.main.fragment_login.*
 
 class ChangePassword : Fragment() {
 
@@ -32,9 +33,9 @@ class ChangePassword : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         editpass_button.setOnClickListener {
-            if (login_pass.text.toString() == editcurrentpass.text.toString()) {
+            if (editcurrentpass.text.toString() == LoginPassword) {
                 if (editpass.text.toString() == editpassword.text.toString()) {
-                    handler.changePass(login_username.text.toString(), editpass.text.toString())
+                    handler.changePass(userID, editpass.text.toString())
                     Toast.makeText(activity, "Change Password Successful", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(activity, "Retype Password Incorrect", Toast.LENGTH_SHORT).show()

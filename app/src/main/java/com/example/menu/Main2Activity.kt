@@ -46,12 +46,12 @@ class Main2Activity : AppCompatActivity() {
                 } else
                     Toast.makeText(this, "Username cannot be empty", Toast.LENGTH_SHORT).show()
             }
-
             textView5.setOnClickListener{
                 setContentView(R.layout.fragment_login)
                 loginToMenu()
             }
         }
+
         loginToMenu()
     }
 
@@ -61,6 +61,7 @@ class Main2Activity : AppCompatActivity() {
                 if (handler.userLogin(login_username.text.toString(), login_pass.text.toString())) {
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                     GlobalVariable.userID = login_username.text.toString()
+                    GlobalVariable.LoginPassword = login_pass.text.toString()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 } else {
